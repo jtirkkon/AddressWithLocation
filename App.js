@@ -14,10 +14,8 @@ export default function App() {
     getLocation();
   }, []);
   
-
   const getAddressLocation = ({address}) => {
     const url = `https://www.mapquestapi.com/geocoding/v1/address?key=N9Z9QLAWypDUl5H5fX46TfSqeGJxoruG&inFormat=kvp&outFormat=json&location=Finland%2C+${address}&thumbMaps=false`
-    //console.log(address)
     
     fetch(url)
       .then((response) => response.json())
